@@ -1,0 +1,63 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+div.form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #ccc;
+}
+
+div.form form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	background-color: blue;
+	/* height: 55vh; */
+	color: white;
+}
+
+.box2{
+	margin: 0 2%;
+	height: 74vh;
+}
+
+
+div.form form div{
+	margin: 2% auto;
+}
+
+div.form form div h1{
+	width: 130px;
+	height: 40px;
+	background-color: #ccc;	
+	text-align: center;
+	color: black;
+}
+
+div.form form div h2{
+	margin: 6px;
+}
+
+div.form form div input{
+	margin: 6px;
+}
+
+div.form form div input[type=submit]{
+	width: 60px;
+	height: 35px;
+	border-radius: 12px;
+	outline: none;
+	border: 0;
+	font-weight: 700;
+	background-color: crimson;
+	color: white;
+	cursor: pointer;
+}
