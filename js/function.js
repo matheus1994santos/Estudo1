@@ -7,12 +7,14 @@ const valor = [
   parseFloat(document.getElementById('val4').value)
 ];
 
+
+
 const sumTotal = (va1, va2, va3, va4) => {
     let ret;
 
-    if (va3 === undefined && va4 === undefined){
+    if (isNaN(va3) && isNaN(va4)){
       ret = va1 + va2;
-    } else if (va4 === undefined){
+    } else if (isNaN(va4)){
       ret = va1 + va2 + va3;
     } else {
       ret = va1 + va2 + va3 + va4;
@@ -20,6 +22,7 @@ const sumTotal = (va1, va2, va3, va4) => {
     console.log(ret);
     return  ret;
 };
+
 
 const Media = (va1,va2) => {
   return va1 / va2;
@@ -32,9 +35,33 @@ valor[0].addEventListener('click', function(e){
   const v3 = parseFloat(document.getElementById('val3').value);
   const v4 = parseFloat(document.getElementById('val4').value);
 
-  console.log(Media(sumTotal(v1,v2,v3,v4),4));
-  return valor[1].innerHTML = Media(sumTotal(v1,v2,v3,v4),4);
+  const resul = Media(sumTotal(v1,v2,v3,v4),quanNotas())
+  console.log(resul);
+  return valor[1].innerHTML = resul;
 });
+
+
+const quanNotas = () => {
+
+  const v3 = parseFloat(document.getElementById('val3').value);
+  const v4 = parseFloat(document.getElementById('val4').value);
+
+  let ret;
+
+  if (isNaN(v3) && isNaN(v4)){
+    ret = 2;
+  } else if (isNaN(v4)){
+    ret = 3;
+  } else {
+    ret = 4;
+  }
+  console.log(ret);
+  return  ret;
+
+} 
+
+
+
 
 
 
