@@ -7,8 +7,6 @@ const valor = [
   parseFloat(document.getElementById('val4').value)
 ];
 
-
-
 const sumTotal = (va1, va2, va3, va4) => {
     let ret;
 
@@ -19,10 +17,9 @@ const sumTotal = (va1, va2, va3, va4) => {
     } else {
       ret = va1 + va2 + va3 + va4;
     }
-    console.log(ret);
+    console.log(ret + " é soma total das notas.");
     return  ret;
-};
-
+}
 
 const Media = (va1,va2) => {
   return va1 / va2;
@@ -36,15 +33,14 @@ valor[0].addEventListener('click', function(e){
   const v4 = parseFloat(document.getElementById('val4').value);
 
   const resul = Media(sumTotal(v1,v2,v3,v4),quanNotas())
-  console.log(resul);
+  console.log(resul  + " é a media das notas.");
   return valor[1].innerHTML = resul;
 });
 
-
 const quanNotas = () => {
 
-  const v3 = parseFloat(document.getElementById('val3').value);
-  const v4 = parseFloat(document.getElementById('val4').value);
+  const v3 = valor[4];
+  const v4 = valor[5];
 
   let ret;
 
@@ -55,7 +51,7 @@ const quanNotas = () => {
   } else {
     ret = 4;
   }
-  console.log(ret);
+  console.log(ret + " por prova aplicada.");
   return  ret;
 
 } 
